@@ -17,7 +17,7 @@ const sizes = {
   h3: "text-2xl sm:text-4xl",
   h4:  "text-lg sm:text-2xl",
   sh1: "text-lg sm:text-xl",
-  body:"text-md sm:text-lg",
+  body:"text-lg sm:text-xl",
   small: "text-sm sm:text-md"
 };
 

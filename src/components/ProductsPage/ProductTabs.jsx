@@ -66,12 +66,11 @@ const ProductTabs = () => {
               key={index}
               icon1={item.icon1}
               icon2={item.icon2}
-              width={60}
               active={activeTab === item.tabId}
               onClick={() => handleTabClick(item.tabId)} // Update tab on icon click
               style={{
-                width: "50px",
-                height: "50px",
+                width: "75px",
+                height: "75px",
                 justifySelf: index % 2 === 0 ? "start" : "end",
                 alignSelf: index < 2 ? "start" : "end",
               }}
@@ -124,7 +123,7 @@ const ProductTabs = () => {
               <Typography variant="h4" className="text-black mt-5">
                 TẤM GẠO
               </Typography>
-              <p className="mt-4">
+              <Typography variant="body" className="text-black mt-4">
                 Tấm gạo là phần hạt gạo bị vỡ trong quá trình xay xát, có giá
                 trị dinh dưỡng tương đương với gạo nguyên hạt. Tấm gạo thường
                 được sử dụng làm nguyên liệu cho các ngành công nghiệp như sản
@@ -132,7 +131,7 @@ const ProductTabs = () => {
                 hàm lượng dinh dưỡng cao và giá thành phải chăng, tấm gạo là lựa
                 chọn lý tưởng để bổ sung vào khẩu phần thức ăn gia súc, gia cầm,
                 giúp tăng cường sức khỏe và hiệu quả sản xuất chăn nuôi.
-              </p>
+              </Typography>
             </div>
           )}
           {activeTab === "tab-2" && (
@@ -140,7 +139,7 @@ const ProductTabs = () => {
               <Typography variant="h4" className="text-black mt-5">
                 BÃ MÌ
               </Typography>
-              <p className="mt-4">
+              <Typography variant="body" className="text-black mt-4">
                 Bã khoai mì, hay bã sắn, là phụ phẩm từ quá trình chiết xuất
                 tinh bột tại nhà máy. Trung bình, mỗi ngày một nhà máy sản xuất
                 100 tấn tinh bột khô sẽ tạo ra khoảng 30-40 tấn bã mì tươi. Bã
@@ -148,18 +147,22 @@ const ProductTabs = () => {
                 vụ nhiều ngành công nghiệp như sản xuất thức ăn chăn nuôi,
                 Ethanol, cồn, axit nitric, và men vi sinh. Trong đó, việc dùng
                 bã khoai mì làm thức ăn chăn nuôi là phổ biến nhất.
-                <Typography variant="body" className="text-black mt-5">
+                <Typography variant="body" className="font-bold text-black mt-5">
                   Chỉ Tiêu Chất Lượng
                 </Typography>
                 Độ ẩm (max): 14%
                 <br />
-                Gluten ướt (min): 32% Protein thô (min): 10,5% Tro thô (max): 1%
+                Gluten ướt (min): 32%
+                <br />
+                Protein thô (min): 10,5%
+                <br />
+                Tro thô (max): 1%
                 <br />
                 Sản phẩm không chứa kháng sinh, hóa chất, chất cấm
                 <br />
                 Công dụng: Sử dụng trong sản xuất thức ăn chăn nuôi, thủy sản Sử
                 dụng theo công thức nhà sản xuất
-              </p>
+              </Typography>
             </div>
           )}
           {activeTab === "tab-3" && (
@@ -167,7 +170,7 @@ const ProductTabs = () => {
               <Typography variant="h4" className="text-black mt-5">
                 CÁM GẠO
               </Typography>
-              <p className="mt-4 text-gray-600">
+              <Typography variant="body" className="text-black mt-4">
                 Cám gạo là lớp vỏ ngoài của hạt gạo, được tách ra trong quá
                 trình xay xát. Đây là sản phẩm giàu dinh dưỡng với hàm lượng
                 protein, chất béo và khoáng chất cao. Cám gạo thường được sử
@@ -177,7 +180,7 @@ const ProductTabs = () => {
                 ứng dụng trong sản xuất thực phẩm chức năng, mỹ phẩm, và các sản
                 phẩm dưỡng da nhờ vào đặc tính chống oxy hóa và làm đẹp tự
                 nhiên.
-              </p>
+              </Typography>
             </div>
           )}
           {activeTab === "tab-4" && (
@@ -185,7 +188,7 @@ const ProductTabs = () => {
               <Typography variant="h4" className="text-black mt-5">
                 KHOAI MÌ LÁT
               </Typography>
-              <p className="mt-4 text-gray-600">
+              <Typography variant="body" className="text-black mt-4">
                 Khoai Mì Lát từ Việt Nam đã và đang khẳng định vị thế trên thị
                 trường quốc tế, được ứng dụng rộng rãi trong sản xuất thức ăn
                 gia súc.
@@ -193,11 +196,7 @@ const ProductTabs = () => {
                 Hưng Long Miền Tây đặc biệt chú trọng đến việc bảo quản và lựa
                 chọn sản phẩm kỹ lưỡng, đảm bảo không bị mối mọt hay sâu bệnh,
                 giúp khoai mì lát của chúng tôi luôn đạt chuẩn sản xuất.
-                <br />
-                Nếu Quý doanh nghiệp có nhu cầu, xin vui lòng liên hệ để nhận
-                báo giá tốt nhất và các thông tin chi tiết.
-                <br />
-                <Typography variant="body" className="text-black mt-5">
+                <Typography variant="body" className="font-bold text-black mt-5">
                   Chỉ Tiêu Chất Lượng
                 </Typography>
                 Moisture : 14.5 % max
@@ -209,7 +208,7 @@ const ProductTabs = () => {
                 Packing : around 40 kgs/pp bag
                 <br />
                 Loading : 27 mts in 1x40’HQ
-              </p>
+              </Typography>
             </div>
           )}
         </div>

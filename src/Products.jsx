@@ -13,14 +13,14 @@ const Products = () => {
         <div>
           <Typography
             variant="h3"
-            className="text-black mt-20 xs:w-full xs:px-5 sm:w-3/4 sm:mx-20 md:w-1/2"
+            className="text-black mt-20 xs:w-3/4 xs:px-24 sm:w-3/4 sm:mx-20 md:w-1/2"
           >
             Nguồn nguyên liệu sử dụng cho sản xuất thức ăn chăn nuôi phù hợp với
             công nghệ và tiêu chuẩn sản xuất tại Việt Nam.
           </Typography>
         </div>
 
-        <div className="mt-40 w-full lg:me-44">
+        <div className="ms-20 mt-20 w-3/4 h-96 lg:me-44">
           <ProductTabs />
         </div>
       </div>
