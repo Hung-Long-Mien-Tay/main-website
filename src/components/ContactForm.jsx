@@ -1,7 +1,11 @@
 import React from "react";
 import Typography from "./Typography";
 
+// images
+import uploadic from "./../assets/btn_icons/uploadic.png";
+
 const ContactUs = () => {
+  const picture = [{ src: uploadic }];
   return (
     <div className="relative w-1/2 p-5 z-10 h-full">
       {/* <div className="bg-darkGreen h-1 rounded-full "></div> */}
@@ -10,9 +14,9 @@ const ContactUs = () => {
           Liên hệ với chúng tôi
         </Typography>
         <Typography variant="body" className="text-black mt-5">
-          Vui lòng điền thông tin vào biểu mẫu liên hệ để chúng tôi có
-          thể phản hồi trong vòng 2 ngày làm việc. Hoặc liên hệ trực tiếp qua
-          email <span className="font-bold">hunglongmientay@email.com</span>.
+          Vui lòng điền thông tin vào biểu mẫu liên hệ để chúng tôi có thể phản
+          hồi trong vòng 2 ngày làm việc. Hoặc liên hệ trực tiếp qua email{" "}
+          <span className="font-bold">hunglongmientay@email.com</span>.
         </Typography>
         <form class="mt-8 space-y-4">
           <div>
@@ -26,7 +30,7 @@ const ContactUs = () => {
               className="mt-1 w-full px-4 py-2 border rounded-md"
             />
           </div>
-          
+
           <div class="flex space-x-4">
             <div class="w-1/2">
               <label for="phone" class="block text-gray-700">
@@ -84,7 +88,7 @@ const ContactUs = () => {
                   for="file-upload"
                   class="flex gap-2 items-center justify-center h-10"
                 >
-                  <img src="src\assets\uploadic.png" alt="upload_icon" />
+                  <img src={picture[0].src} alt="upload_icon" />
                   <span class="text-greyShadow">Tải lên tệp bổ sung</span>
                 </label>
               </div>

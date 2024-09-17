@@ -4,13 +4,20 @@ import NavBarDark from "./components/NavBarDark";
 import Typography from "./components/Typography";
 import ContactForm from "./components/ContactForm";
 
+// images
+import bran from "./assets/products/bran.jpeg";
+import pigs from "./assets/products/pigs.jpeg";
+import production from "./assets/products/production.jpg";
+
 const About = () => {
-  const location = useLocation()
+  const picture = [{ src: bran }, { src: pigs }, { src: production }];
+
+  const location = useLocation();
   const contactRef = useRef(null);
 
   useEffect(() => {
-    if (location.hash === '#contact') {
-      contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    if (location.hash === "#contact") {
+      contactRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
     }
   }, [location.hash]);
   return (
@@ -37,11 +44,7 @@ const About = () => {
         <div className="flex flex-wrap sm:flex-nowrap mt-10 py-20 gap-10 sm:mx-10 lg:mx-40">
           {/* 1 */}
           <div className="flex-col xs:w-full sm:w-1/3">
-            <img
-              src="src\assets\products\bran.jpeg"
-              alt="Bran"
-              className="rounded-lg"
-            />
+            <img src={picture[0].src} alt="Bran" className="rounded-lg" />
             <Typography variant="h4" className="text-white mt-10">
               Đối Tác Tin Cậy Trong Ngành Thức Ăn Chăn Nuôi
             </Typography>
@@ -57,11 +60,7 @@ const About = () => {
           </div>
           {/* 2 */}
           <div className="flex-col xs:w-full sm:w-1/3">
-            <img
-              src="src\assets\products\pigs.jpeg"
-              alt="Pigs"
-              className="rounded-lg"
-            />
+            <img src={picture[1].src} alt="Pigs" className="rounded-lg" />
             <Typography variant="h4" className="text-white mt-10">
               Phát Triển Bền Vững Cùng Nguyên Liệu Sạch
             </Typography>
@@ -78,11 +77,7 @@ const About = () => {
           </div>
           {/* 3 */}
           <div className="flex-col xs:w-full sm:w-1/3">
-            <img
-              src="src\assets\products\production.jpg"
-              alt="Pigs"
-              className="rounded-lg"
-            />
+            <img src={picture[2].src} alt="Pigs" className="rounded-lg" />
             <Typography variant="h4" className="text-white mt-10">
               Quy Trình Sản Xuất Và Kiểm Tra Chất Lượng
             </Typography>
@@ -100,7 +95,11 @@ const About = () => {
       {/* SECTION 2: FACTORY IMGs */}
 
       {/* SECTION 3: CONTACT US */}
-      <div ref={contactRef} id="contact" className="relative min-h-screen flex items-center justify-center">
+      <div
+        ref={contactRef}
+        id="contact"
+        className="relative min-h-screen flex items-center justify-center"
+      >
         {/* Background Image */}
         {/* <div>
           <div className="absolute right-0 top-0 w-1/2 h-full bg-contactbg bg-cover bg-right"></div>
