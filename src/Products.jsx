@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarLight from "./components/NavBarLight";
+import NavBarDark from "./components/NavBarDark";
 import Typography from "./components/Typography";
 import Footer from "./components/Footer/Footer";
 import buttonConfig from "./config/buttonConfig";
@@ -8,7 +9,9 @@ import ProductTabs from "./components/ProductsPage/ProductTabs";
 const Products = () => {
   return (
     <div>
-      <NavBarLight />
+      <div className="bg-black">
+      <NavBarDark />
+      </div>
       <div className="">
         <div>
           <Typography
