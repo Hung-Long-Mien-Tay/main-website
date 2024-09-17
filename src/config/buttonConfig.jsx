@@ -1,19 +1,23 @@
+// icon
+import green_arrow from "./../assets/btn_icons/green-arrow.png"
+import white_arrow from "./../assets/btn_icons/white-arrow-right.png"
+
 // Configuration for all buttons used in the application
 const buttonConfig = {
   seeAllProduce: {
     name: "Giới thiệu sản phẩm",
     href: "#seeAllProduce",
-    icon: "src/assets/green-arrow.png"
+    icon: green_arrow
   },
   learnMore: {
     name: "Tiềm hiểu thêm",
     href: "#learnMore",
-    icon: "src/assets/white-arrow-right.png"
+    icon: white_arrow
   },
   workWithUs: {
     name: "Hợp tác với chúng tôi",
     href: "/about#contact",
-    icon: "src/assets/white-arrow-right.png"
+    icon: white_arrow
   },
   home: {
     name: "Trang chủ",

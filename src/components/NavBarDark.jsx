@@ -11,7 +11,11 @@ import {
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, NavLink } from "react-router-dom";
 
+// image
+import logoDark from "./../assets/logo/logo_dark.png";
+
 const NavBarDark = () => {
+  const picture = [{ src: logoDark }];
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -34,11 +38,7 @@ const NavBarDark = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="Logo"
-                src="src\assets\logo_dark.png"
-                className="h-8 w-auto"
-              />
+              <img alt="Logo" src={picture[0].src} className="h-8 w-auto" />
             </div>
             <div className="hidden text-secondary-white sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -46,7 +46,9 @@ const NavBarDark = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-white text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-white text-lg px-3 py-2"
                   }
                 >
                   Trang Chủ
@@ -54,7 +56,9 @@ const NavBarDark = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-white text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-white text-lg px-3 py-2"
                   }
                 >
                   Về Chúng Tôi
@@ -62,7 +66,9 @@ const NavBarDark = () => {
                 <NavLink
                   to="/products"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-white text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-white text-lg px-3 py-2"
                   }
                 >
                   Sản Phẩm

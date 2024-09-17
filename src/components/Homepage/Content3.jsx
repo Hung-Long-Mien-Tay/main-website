@@ -2,15 +2,18 @@ import React from "react";
 import Typography from "../Typography";
 import ItemCard from "../ItemCard";
 
+// images
+import rice from "./../../assets/products/tam-gao.jpeg";
+import cassava from "./../../assets/products/cassava2.jpg";
+import cassavaResidue from "./../../assets/products/cassava-residue.png";
+import riceBran from "./../../assets/products/rice-bran.jpg";
+
 const Content3 = () => {
   const products = [
-    
-    { id: 1, title: 'Tấm Gạo', imageUrl: 'src/assets/products/tam-gao.jpeg' },
-    { id: 2, title: 'Khoai Mì Lát', imageUrl: 'src/assets/products/cassava2.jpg' },
-    { id: 3, title: 'Bã Mì', imageUrl: 'src/assets/products/cassava-residue.png' },
-    { id: 4, title: "Cám Gạo", imageUrl: 'src/assets/products/rice-bran.jpg' },
-    // { id: 5, title: 'Dairy Products', imageUrl: 'src/assets/products/dairy.png' },
-    // { id: 6, title: 'Sea Food', imageUrl: 'src/assets/products/seafood.png' }
+    { id: 1, title: "Tấm Gạo", src: rice },
+    { id: 2, title: "Khoai Mì Lát", src: cassava },
+    { id: 3, title: "Bã Mì", src: cassavaResidue },
+    { id: 4, title: "Cám Gạo", src: riceBran },
   ];
 
   return (
@@ -28,7 +31,7 @@ const Content3 = () => {
           <ItemCard
             key={product.id}
             title={product.title}
-            imageUrl={product.imageUrl}
+            imageUrl={product.src}
           />
         ))}
       </div>

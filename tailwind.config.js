@@ -32,7 +32,7 @@ module.exports = {
       'base': '0.03em'
     },
     backgroundImage: {
-      'homebg': "url('assets/homebg.png')",
+      'homebg': "url('assets/homepage/homebg.png')",
       'global': "url('assets/global.png')",
       'contactbg': "url('assets/cropsbg.png')",
       'green-gradient-tr': 'linear-gradient(to top right, #000 0%, #004A15 100%)',

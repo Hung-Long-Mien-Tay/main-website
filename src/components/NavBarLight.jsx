@@ -11,7 +11,11 @@ import {
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, NavLink } from "react-router-dom";
 
+// image
+import logoLight from "./../assets/logo/logo_dark.png";
+
 const NavBarLight = () => {
+  const picture = [{ src: logoLight }];
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="xs:mx-3 sm:mx-10 lg:mx-40">
@@ -35,7 +39,7 @@ const NavBarLight = () => {
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Logo"
-                src="src\assets\logo_light.png"
+                src={picture[0].src}
                 className="h-8 w-auto"
               />
             </div>
@@ -45,7 +49,9 @@ const NavBarLight = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-black text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-black text-lg px-3 py-2"
                   }
                 >
                   Trang Chủ
@@ -53,7 +59,9 @@ const NavBarLight = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-black text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-black text-lg px-3 py-2"
                   }
                 >
                   Về Chúng Tôi
@@ -61,7 +69,9 @@ const NavBarLight = () => {
                 <NavLink
                   to="/products"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-black text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-black text-lg px-3 py-2"
                   }
                 >
                   Sản Phẩm
@@ -69,7 +79,9 @@ const NavBarLight = () => {
                 <NavLink
                   to="/about#contact"
                   className={({ isActive }) =>
-                    isActive ? "text-primaryGreen text-lg px-3 py-2" : "text-black text-lg px-3 py-2"
+                    isActive
+                      ? "text-primaryGreen text-lg px-3 py-2"
+                      : "text-black text-lg px-3 py-2"
                   }
                 >
                   Liên hệ

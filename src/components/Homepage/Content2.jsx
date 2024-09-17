@@ -1,16 +1,20 @@
 // Content2.jsx
 import React from "react";
 import Typography from "../Typography";
+// images
+import farmerHand from "./../../assets/products/farmer-hand.jpg";
 
 const Content2 = ({ buttonlinks }) => {
-  const IMAGES = {
-    farmer: "src/assets/products/farmer-hand.jpg",
-  };
+  const picture = [{ src: farmerHand }];
 
   return (
     <div className="flex flex-wrap sm:flex-nowrap items-center">
       {/* Image */}
-      <img src={IMAGES.farmer} alt="Farmer" className="rounded-tr-3xl xs:w-full sm:w-1/2 me-20 my-20 shadow-2xl shadow-greyShadow" />
+      <img
+        src={picture[0].src}
+        alt="Farmer"
+        className="rounded-tr-3xl xs:w-full sm:w-1/2 me-20 my-20 shadow-2xl shadow-greyShadow"
+      />
       {/* Text Column */}
       <div className="flex-col xs:mx-10 lg:mx-0 lg:me-10 space-y-5">
         {/* 2.1 Green Gradient Bar */}
@@ -21,8 +25,9 @@ const Content2 = ({ buttonlinks }) => {
         </Typography>
         <Typography variant="body" className="text-black sm:w-3/4">
           Với hơn 20 năm kinh nghiệm, Hưng Long Miền Tây là đối tác tin cậy của
-          nhiều nhà sản xuất thức ăn chăn nuôi Việt Nam. Chúng tôi
-          đảm bảo chất lượng của sản phẩm đầu ra và duy trì trên 95% lượng khách hàng qua từng năm.
+          nhiều nhà sản xuất thức ăn chăn nuôi Việt Nam. Chúng tôi đảm bảo chất
+          lượng của sản phẩm đầu ra và duy trì trên 95% lượng khách hàng qua
+          từng năm.
         </Typography>
         {/* 2.3 Learn More Button */}
         {buttonlinks.map((link) => (
