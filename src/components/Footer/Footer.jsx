@@ -1,14 +1,19 @@
 import React from "react";
 import Typography from "../Typography";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import FooterButton from "./FooterButton";
 import FooterNonButton from "./FooterNonButton";
 import buttonConfig from "../../config/buttonConfig";
 
+// logo
+import logofull from "../../assets/logo/logo_icon.png";
+
 const Footer = ({ buttonlinks }) => {
+  const logo = [{ src: logofull }];
   return (
     <div className="bg-green-gradient-tr h-full">
-      <div className="flex flex-wrap pt-20 justify-between xs:mx-5 sm:mx-32">
+      <div className="flex f
+      lex-wrap pt-20 justify-between xs:mx-5 sm:mx-32">
         <Typography variant="h2" className="text-white font-normal mt-5">
           We Farm, <span className="text-primaryGreen font-bold">You Eat</span>
         </Typography>
@@ -26,11 +31,14 @@ const Footer = ({ buttonlinks }) => {
       </div>
       <div className="flex flex-wrap justify-between py-20 xs:mx-5 sm:mx-32">
         <div className="flex-col">
-          <img alt="Logo" src="src\assets\logo_icon.png" className="w-auto" />
+          <img alt="Logo" src={logo[0].src} className="w-auto" />
         </div>
 
         <div className="flex flex-col px-5">
-          <Typography variant="sh1" className="text-primaryGreen font-bold mb-3">
+          <Typography
+            variant="sh1"
+            className="text-primaryGreen font-bold mb-3"
+          >
             Link
           </Typography>
           <FooterButton buttonLink={buttonConfig.home}></FooterButton>
@@ -39,7 +47,10 @@ const Footer = ({ buttonlinks }) => {
         </div>
 
         <div className="flex flex-col  px-5">
-          <Typography variant="sh1" className="text-primaryGreen font-bold mb-3">
+          <Typography
+            variant="sh1"
+            className="text-primaryGreen font-bold mb-3"
+          >
             About Us
           </Typography>
           <FooterButton buttonLink={buttonConfig.vision}></FooterButton>
@@ -48,7 +59,10 @@ const Footer = ({ buttonlinks }) => {
         </div>
 
         <div className="flex flex-col  ">
-          <Typography variant="sh1" className="text-primaryGreen font-bold mb-3">
+          <Typography
+            variant="sh1"
+            className="text-primaryGreen font-bold mb-3"
+          >
             Contact Us
           </Typography>
           <FooterNonButton content="Address here"></FooterNonButton>

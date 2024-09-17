@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Typography from "../Typography";
 import ButtonIcon from "./ButtonIcon";
 
+// images
+import packaging from "../../assets/products/packaging.png";
+
+// icons
 import CassavaWhiteIcon from "../../assets/icons/cassava_whiteic.png";
 import CassavaBlackIcon from "../../assets/icons/cassava_blackic.png";
 import CassavaPowWhiteIcon from "../../assets/icons/cassavapowder_whiteic.png";
@@ -19,6 +23,8 @@ const ProductTabs = () => {
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
+
+  const picture = [{ src: packaging }];
 
   const icons = [
     { icon1: CassavaWhiteIcon, icon2: CassavaBlackIcon, tabId: "tab-1" },
@@ -45,14 +51,14 @@ const ProductTabs = () => {
           }}
         >
           <img
-            src="src/assets/products/packaging.png"
+            src={picture[0].src}
             alt="Central"
             style={{
-                width: "80%",
-                gridColumn: "1 / 3",
-                gridRow: "2 / 3",
-                justifySelf: "center",
-                alignSelf: "center",
+              width: "80%",
+              gridColumn: "1 / 3",
+              gridRow: "2 / 3",
+              justifySelf: "center",
+              alignSelf: "center",
             }}
           />
           {icons.map((item, index) => (
@@ -92,26 +98,32 @@ const ProductTabs = () => {
               id={item.tabId}
               tabIndex={activeTab === item.tabId ? "0" : "-1"}
               className={`relative block h-10 px-6 tab rounded-full ${
-                activeTab === item.tabId ? "bg-black text-white" : "bg-lightgray text-black"
+                activeTab === item.tabId
+                  ? "bg-black text-white"
+                  : "bg-lightgray text-black"
               }`}
               onClick={() => handleTabClick(item.tabId)}
             >
-              <span className="text-gray-800">{item.tabId === "tab-1" ? "TẤM GẠO" : item.tabId === "tab-2" ? "BÃ MÌ" : item.tabId === "tab-3" ? "CÁM GẠO" : "KHOAI MÌ LÁT"}</span>
+              <span className="text-gray-800">
+                {item.tabId === "tab-1"
+                  ? "TẤM GẠO"
+                  : item.tabId === "tab-2"
+                  ? "BÃ MÌ"
+                  : item.tabId === "tab-3"
+                  ? "CÁM GẠO"
+                  : "KHOAI MÌ LÁT"}
+              </span>
             </button>
           ))}
         </div>
-        
+
         {/* panel */}
         <div className="mx-16 mt-10 md:w-3/4">
           {activeTab === "tab-1" && (
-            <div
-              role="tabpanel"
-              id="panel-1"
-              className="tab-panel"
-            >
-                <Typography variant="h4" className="text-black mt-5">
+            <div role="tabpanel" id="panel-1" className="tab-panel">
+              <Typography variant="h4" className="text-black mt-5">
                 TẤM GẠO
-                </Typography>
+              </Typography>
               <p className="mt-4">
                 Tấm gạo là phần hạt gạo bị vỡ trong quá trình xay xát, có giá
                 trị dinh dưỡng tương đương với gạo nguyên hạt. Tấm gạo thường
@@ -124,14 +136,10 @@ const ProductTabs = () => {
             </div>
           )}
           {activeTab === "tab-2" && (
-            <div
-              role="tabpanel"
-              id="panel-2"
-              className="tab-panel"
-            >
+            <div role="tabpanel" id="panel-2" className="tab-panel">
               <Typography variant="h4" className="text-black mt-5">
                 BÃ MÌ
-                </Typography>
+              </Typography>
               <p className="mt-4">
                 Bã khoai mì, hay bã sắn, là phụ phẩm từ quá trình chiết xuất
                 tinh bột tại nhà máy. Trung bình, mỗi ngày một nhà máy sản xuất
@@ -155,14 +163,10 @@ const ProductTabs = () => {
             </div>
           )}
           {activeTab === "tab-3" && (
-            <div
-              role="tabpanel"
-              id="panel-3"
-              className="tab-panel"
-            >
+            <div role="tabpanel" id="panel-3" className="tab-panel">
               <Typography variant="h4" className="text-black mt-5">
                 CÁM GẠO
-                </Typography>
+              </Typography>
               <p className="mt-4 text-gray-600">
                 Cám gạo là lớp vỏ ngoài của hạt gạo, được tách ra trong quá
                 trình xay xát. Đây là sản phẩm giàu dinh dưỡng với hàm lượng
@@ -177,14 +181,10 @@ const ProductTabs = () => {
             </div>
           )}
           {activeTab === "tab-4" && (
-            <div
-              role="tabpanel"
-              id="panel-4"
-              className="tab-panel"
-            >
+            <div role="tabpanel" id="panel-4" className="tab-panel">
               <Typography variant="h4" className="text-black mt-5">
                 KHOAI MÌ LÁT
-                </Typography>
+              </Typography>
               <p className="mt-4 text-gray-600">
                 Khoai Mì Lát từ Việt Nam đã và đang khẳng định vị thế trên thị
                 trường quốc tế, được ứng dụng rộng rãi trong sản xuất thức ăn
